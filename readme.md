@@ -32,7 +32,7 @@ Siga os passos abaixo para rodar o projeto localmente no seu ambiente:
 Primeiramente, faça o clone do repositório para o seu computador utilizando o comando abaixo. Isso irá baixar todos os arquivos necessários para o seu ambiente local.
 
 ```bash
-git clone https://github.com/Kaiquemarques00/Shop.co_E-commerce.git
+git clone https://github.com/Kaiquemarques00/Shop.co-E-commerce.git
 ```
 
 ### 2. Navegue até o Diretório do Projeto
@@ -40,7 +40,7 @@ git clone https://github.com/Kaiquemarques00/Shop.co_E-commerce.git
 Após clonar o repositório, entre na pasta do projeto:
 
 ```bash
-cd Shop.co_E-commerce
+cd Shop.co-E-commerce
 ```
 
 ### 3. Abra o Arquivo index.html
