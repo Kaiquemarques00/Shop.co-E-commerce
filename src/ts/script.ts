@@ -14,6 +14,11 @@ const loadComponent = (componentPath: string, elementId: string) => {
 
 window.onload = () => {
   loadComponent("./components/header.html", "header");
-  loadComponent("./components/main.html", "main");
+  loadComponent("./components/presentation.html", "presentation");
+  loadComponent("./components/new_arrivals.html", "new-arrivals");
+  loadComponent("./components/top_selling.html", "top-selling");
+  loadComponent("./components/reviews.html", "reviews");
+  loadComponent("./components/newsletter.html", "newsletter");
+  loadComponent("./components/browse.html", "browse");
   loadComponent("./components/footer.html", "footer");
 };
