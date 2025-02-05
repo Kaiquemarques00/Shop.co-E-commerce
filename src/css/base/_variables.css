@@ -1,0 +1,10 @@
+@import url("satoshi.css");
+@import url("integral_cf.css");
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+
+  --font-primary: "Satoshi-Variable";
+  --font-secondary: "Integral-Bold";
+}
