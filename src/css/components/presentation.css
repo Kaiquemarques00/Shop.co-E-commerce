@@ -1,7 +1,78 @@
 #presentation {
-    background-color: var(--gray-color);
+  background-color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-    & .background-img {
-        width: 100%;
+  & .text-presentation {
+    max-width: 100%;
+    & h1 {
+        font-size: clamp(2.25rem, 5vw, 4rem);
+        padding: 50px 40px 10px 20px;
+      }
+    
+      & p.text {
+        padding: 0 10px 0 20px;
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        opacity: 60%;
+      }
+  }
+
+  & a {
+    width: 90%;
+    height: 52px;
+    background-color: var(--black-color);
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--white-color);
+  }
+
+  & .informations {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & li:nth-child(1), li:nth-child(2) {
+        min-width: 40%;
+        max-width: 50%;
     }
+
+    & li:nth-child(1) {
+        border-right: 2px solid #00000010;
+        padding-right: 8%;
+
+    }
+
+    & li:nth-child(2) {
+        padding-left: 10%;
+    }
+
+    & li:nth-child(3) {
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    & li {
+        & h2 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+        }
+
+        & p {
+            font-size: clamp(0.75rem, 2vw, 1rem);
+        }
+    }
+
+  }
+
+  & .background-img {
+    width: 100%;
+  }
 }
