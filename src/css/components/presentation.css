@@ -1,0 +1,7 @@
+#presentation {
+    background-color: var(--gray-color);
+
+    & .background-img {
+        width: 100%;
+    }
+}

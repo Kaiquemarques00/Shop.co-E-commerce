@@ -9,3 +9,12 @@ body {
   background: var(--white-color);
   color: var(--black-color);
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--black-color);
+  text-decoration: none;
+}

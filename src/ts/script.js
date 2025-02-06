@@ -17,7 +17,6 @@ window.onload = function () {
     loadComponent("./components/new_arrivals.html", "new-arrivals");
     loadComponent("./components/top_selling.html", "top-selling");
     loadComponent("./components/reviews.html", "reviews");
-    loadComponent("./components/newsletter.html", "newsletter");
     loadComponent("./components/browse.html", "browse");
     loadComponent("./components/footer.html", "footer");
 };
