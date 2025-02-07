@@ -2,20 +2,19 @@
   background-color: var(--gray-color);
   display: flex;
   flex-direction: column;
-  gap: 20px;
 
   & .text-presentation {
     max-width: 100%;
     & h1 {
-        font-size: clamp(2.25rem, 5vw, 4rem);
-        padding: 50px 40px 10px 20px;
-      }
-    
-      & p.text {
-        padding: 0 10px 0 20px;
-        font-size: clamp(0.875rem, 2vw, 1rem);
-        opacity: 60%;
-      }
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      padding: 50px 40px 10px 20px;
+    }
+
+    & p.text {
+      padding: 0 10px 20px 20px;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      opacity: 60%;
+    }
   }
 
   & a {
@@ -38,41 +37,110 @@
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 20px;
 
-    & li:nth-child(1), li:nth-child(2) {
-        min-width: 40%;
-        max-width: 50%;
+    & li:nth-child(1),
+    li:nth-child(2) {
+      min-width: 40%;
+      max-width: 50%;
     }
 
     & li:nth-child(1) {
-        border-right: 2px solid #00000010;
-        padding-right: 8%;
-
+      border-right: 2px solid #00000010;
+      padding-right: 8%;
     }
 
     & li:nth-child(2) {
-        padding-left: 10%;
+      padding-left: 10%;
     }
 
     & li:nth-child(3) {
-        max-width: 100%;
-        margin: 0 auto;
-        padding-top: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-top: 20px;
     }
 
     & li {
-        & h2 {
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
-        }
+      & h2 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+      }
 
-        & p {
-            font-size: clamp(0.75rem, 2vw, 1rem);
-        }
+      & p {
+        font-size: clamp(0.75rem, 2vw, 1rem);
+      }
     }
-
   }
 
-  & .background-img {
-    width: 100%;
+  & .banner {
+    max-height: 448px;
+    & .figure-banner {
+      height: 448px;
+      max-width: 100%;
+      & .background-img {
+        width: 100%;
+        height: 448px;
+        object-fit: cover;
+        object-position: 89%;
+      }
+    }
+
+    & .stars {
+      display: flex;
+      max-width: clamp(85%, 50vh, 90%);
+      min-height: 150px;
+      margin: 0 auto;
+      justify-content: end;
+      position: relative;
+      top: -400px;
+
+      & figure {
+        & img {
+          width: auto;
+        }
+      }
+
+      & figure:nth-child(1) {
+        align-self: flex-end;
+        padding-right: 225px;
+        & img {
+          max-width: 44px;
+        }
+      }
+
+      & figure:nth-child(2) {
+        & img {
+          max-width: 76px;
+        }
+      }
+    }
+  }
+
+  & .brands {
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    gap: 15px 8%;
+    align-items: center;
+    height: 150px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+    & figure:nth-child(1),
+    figure:nth-child(2),
+    figure:nth-child(3),
+    figure:nth-child(4),
+    figure:nth-child(5) {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 991.88px) {
+  #presentation {
+
+    & .text-presentation{
+      
+    }
   }
 }
