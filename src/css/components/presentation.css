@@ -165,7 +165,7 @@
       margin: 0;
       justify-content: start;
       flex-wrap: nowrap;
-      padding: 70px 40px 55px 10%;
+      padding: 70px 40px clamp(30px, 2vh, 2%) 10%;
       gap: 5%;
 
       & li {
@@ -272,6 +272,10 @@
     & p {
       font-size: 16px !important;
     }
+  }
+
+  .informations {
+    padding-bottom: 55px !important;
   }
 
 }
