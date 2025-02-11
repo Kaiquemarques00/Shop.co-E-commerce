@@ -99,6 +99,13 @@
     font-weight: 500;
     font-size: clamp(14px, 2vw, 16px);
   }
+
+  & .bar {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--gray-color);
+  }
 }
 
 @media screen and (min-width: 991.88px) {
