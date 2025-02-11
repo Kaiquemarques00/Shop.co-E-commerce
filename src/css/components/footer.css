@@ -1,0 +1,172 @@
+#footer {
+    width: 100%;
+    background: linear-gradient(to bottom, #FFFFFF 10%, #F0F0F0 10%);
+
+    & footer {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        & .newsletter {
+            width: 100%;
+            background-color: var(--black-color);
+            color: var(--white-color);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+
+            & h1 {
+                font-size: clamp(32px, 2vw, 40px);
+                margin-bottom: 30px;
+            }
+
+            & form {
+                width: 95%;
+                margin: 0 auto;
+
+                & .email-container {
+                    width: 100%;
+                    height: 42px;
+                    background-color: var(--white-color);
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 15px;
+
+                    & figure {
+                        margin-right: 15px;
+                        height: 24px;
+
+                        & img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    & input {
+                        border: none;
+                        height: 90%;
+                        outline: none;
+                        font-family: var(--font-primary);
+                        font-size: clamp(14px, 2vw, 16px);
+                    }
+                }
+
+                & button {
+                    width: 100%;
+                    height: 42px;
+                    background-color: var(--white-color);
+                    border-radius: 20px;
+                    padding: 0 15px;
+                    margin-top: 5px;
+                    border: none;
+                    font-family: var(--font-primary);
+                    font-size: clamp(14px, 2vw, 16px);
+                    font-weight: 600;
+                }
+            }
+        }
+
+        & .company-information {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            & h1 {
+                font-size: clamp(29px, 2vw, 34px);
+            }
+
+            & p {
+                opacity: 60%;
+                font-size: 14px;
+            }
+
+            & .socials{
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                & li {
+                    border: 2px solid #00000033;
+                    background-color: var(--white-color);
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    & figure {
+                        height: 16px;
+                        & img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+
+                & li:nth-child(2) {
+                    background-color: var(--black-color);
+                }
+            }
+        }
+
+        & .info-footer {
+            font-size: clamp(14px, 2vw, 16px);
+            width: 50%;
+            margin-bottom: 15px;
+
+            & h2 {
+                letter-spacing: 1px;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: clamp(14px, 2vw, 16px);
+                margin-bottom: 15px;
+            }
+
+            & li {
+                margin-bottom: 15px;
+                opacity: 60%;
+            }
+        }
+
+        & .faq,
+        .resources {
+            padding-bottom: 30px;
+            border-bottom: 2px solid #0000000e;
+        }
+
+        & .last {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 15px;
+            margin-bottom: 70px;
+
+            & p {
+                text-align: center;
+                font-size: 14px;
+                opacity: 60%;
+                margin-bottom: 10px;
+            }
+
+            & .payments-methods{
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+
+                & figure {
+                    height: 26px;
+                    & img {
+                        width: 40px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
