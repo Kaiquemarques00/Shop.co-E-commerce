@@ -212,7 +212,7 @@
 
       & .stars {
         min-height: 300px;
-  
+
         & figure:nth-child(1) {
           align-self: flex-end;
           padding-right: 35%;
@@ -220,7 +220,7 @@
             max-width: initial;
           }
         }
-  
+
         & figure:nth-child(2) {
           & img {
             max-width: initial;
@@ -238,7 +238,7 @@
       height: 150px;
       flex-wrap: wrap;
       padding: 40px 0;
-  
+
       & figure:nth-child(1),
       figure:nth-child(2),
       figure:nth-child(3),
@@ -259,7 +259,6 @@
 }
 
 @media screen and (min-width: 1422.88px) {
-
   & .text-presentation {
     padding-top: 70px !important;
   }
@@ -277,5 +276,4 @@
   .informations {
     padding-bottom: 55px !important;
   }
-
 }

@@ -19,7 +19,7 @@
     margin-bottom: 20px;
 
     & .product-3,
-      .product-4 {
+    .product-4 {
       display: none;
     }
 
