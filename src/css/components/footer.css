@@ -24,6 +24,7 @@
       & form {
         width: 95%;
         margin: 0 auto;
+        font-size: clamp(14px, 3vw, 16px);
 
         & .email-container {
           width: 100%;
