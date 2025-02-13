@@ -145,6 +145,7 @@
       margin: 0;
       & h1 {
         padding: 10px 0;
+        height: 250px;
       }
 
       & p.text {
@@ -165,7 +166,7 @@
       margin: 0;
       justify-content: start;
       flex-wrap: nowrap;
-      padding: 70px 40px clamp(30px, 2vh, 2%) 10%;
+      padding: 70px 40px 10px 10%;
       gap: 5%;
 
       & li {
@@ -235,7 +236,7 @@
       justify-content: center;
       gap: 15px 8%;
       align-items: center;
-      height: 150px;
+      height: 130px;
       flex-wrap: wrap;
       padding: 40px 0;
 
