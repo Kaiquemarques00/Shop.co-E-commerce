@@ -166,7 +166,7 @@
       margin: 0;
       justify-content: start;
       flex-wrap: nowrap;
-      padding: 70px 40px 10px 10%;
+      padding: 70px 40px 8px 10%;
       gap: 5%;
 
       & li {
@@ -236,7 +236,6 @@
       justify-content: center;
       gap: 15px 8%;
       align-items: center;
-      height: 130px;
       flex-wrap: wrap;
       padding: 40px 0;
 
