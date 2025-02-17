@@ -24,6 +24,7 @@
 
       & figure {
         & img {
+          cursor: pointer;
           width: 24px;
           height: 24px;
         }
@@ -38,6 +39,7 @@
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 30px;
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
       & .stars {
         display: flex;
@@ -114,4 +116,14 @@
       }
     }
   }
+}
+
+.review.moving-next {
+  transform: translateX(-120%);
+  opacity: 0;
+}
+
+.review.moving-prev {
+  transform: translateX(120%);
+  opacity: 0;
 }

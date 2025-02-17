@@ -73,13 +73,76 @@ const initializeFormValidation = () => {
   });
 };
 
-// Carrega os componentes e só executa a validação depois que o footer for carregado.
+// Carrousel
+const initializeReviewCarousel = () => {
+  const carouselContainer = document.getElementById(
+    "carousel-container"
+  ) as HTMLElement;
+  const prevButton = document.getElementById("previous") as HTMLElement;
+  const nextButton = document.getElementById("next") as HTMLElement;
+
+  if (!carouselContainer || !prevButton || !nextButton) {
+    console.warn("Carrossel não encontrado!");
+    return;
+  }
+
+  const moveNext = (): void => {
+    const firstReview = carouselContainer.firstElementChild as HTMLElement;
+    if (firstReview) {
+      firstReview.classList.add("moving-next"); // Aplica a animação
+
+      setTimeout(() => {
+        carouselContainer.appendChild(firstReview); // Move o elemento no DOM
+        firstReview.classList.remove("moving-next"); // Remove a classe após a transição
+        updateClasses();
+      }, 500); // Tempo da animação em ms (deve ser igual ao CSS)
+    }
+  };
+
+  const movePrevious = (): void => {
+    const lastReview = carouselContainer.lastElementChild as HTMLElement;
+    if (lastReview) {
+      lastReview.classList.add("moving-prev"); // Aplica a animação
+
+      setTimeout(() => {
+        carouselContainer.insertBefore(
+          lastReview,
+          carouselContainer.firstElementChild
+        );
+        lastReview.classList.remove("moving-prev"); // Remove a classe após a transição
+        updateClasses();
+      }, 500);
+    }
+  };
+
+  const updateClasses = (): void => {
+    const reviews: HTMLElement[] = [];
+    for (let i = 0; i < carouselContainer.children.length; i++) {
+      reviews.push(carouselContainer.children[i] as HTMLElement);
+    }
+
+    reviews.forEach((review, index) => {
+      review.className = `review review-${index + 1}`;
+    });
+  };
+
+  nextButton.addEventListener("click", moveNext);
+  prevButton.addEventListener("click", movePrevious);
+
+  updateClasses();
+};
+
+// Carrega a seção de reviews e inicializa o carrossel após o carregamento
 window.onload = () => {
   loadComponent("./components/header.html", "header");
   loadComponent("./components/presentation.html", "presentation");
   loadComponent("./components/new_arrivals.html", "new-arrivals");
   loadComponent("./components/top_selling.html", "top-selling");
-  loadComponent("./components/reviews.html", "reviews");
+  loadComponent(
+    "./components/reviews.html",
+    "reviews",
+    initializeReviewCarousel
+  );
   loadComponent("./components/browse.html", "browse");
   loadComponent("./components/footer.html", "footer", initializeFormValidation);
 };
