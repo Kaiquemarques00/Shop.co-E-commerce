@@ -73,7 +73,7 @@ const initializeFormValidation = () => {
   });
 };
 
-// Carrousel
+// Inicialização dos eventos no carousel
 const initializeReviewCarousel = () => {
   const carouselContainer = document.getElementById(
     "carousel-container"
@@ -89,27 +89,27 @@ const initializeReviewCarousel = () => {
   const moveNext = (): void => {
     const firstReview = carouselContainer.firstElementChild as HTMLElement;
     if (firstReview) {
-      firstReview.classList.add("moving-next"); // Aplica a animação
+      firstReview.classList.add("moving-next");
 
       setTimeout(() => {
-        carouselContainer.appendChild(firstReview); // Move o elemento no DOM
-        firstReview.classList.remove("moving-next"); // Remove a classe após a transição
+        carouselContainer.appendChild(firstReview);
+        firstReview.classList.remove("moving-next");
         updateClasses();
-      }, 500); // Tempo da animação em ms (deve ser igual ao CSS)
+      }, 500);
     }
   };
 
   const movePrevious = (): void => {
     const lastReview = carouselContainer.lastElementChild as HTMLElement;
     if (lastReview) {
-      lastReview.classList.add("moving-prev"); // Aplica a animação
+      lastReview.classList.add("moving-prev");
 
       setTimeout(() => {
         carouselContainer.insertBefore(
           lastReview,
           carouselContainer.firstElementChild
         );
-        lastReview.classList.remove("moving-prev"); // Remove a classe após a transição
+        lastReview.classList.remove("moving-prev");
         updateClasses();
       }, 500);
     }
